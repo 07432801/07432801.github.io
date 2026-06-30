@@ -397,6 +397,66 @@
   animate();
 
   // ============================================================
+  //  WECHAT QR CODE POPUP
+  // ============================================================
+  const wechatBtn   = document.getElementById('wechat-share-btn');
+  const qrPopup     = document.getElementById('wechat-qr-popup');
+  const qrImg       = document.getElementById('wechat-qr-img');
+  const qrClose     = document.getElementById('wechat-qr-close');
+
+  if (wechatBtn && qrPopup && qrImg && qrClose) {
+    wechatBtn.addEventListener('click', () => {
+      const url = wechatBtn.getAttribute('data-share-url');
+      qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(url)}`;
+      qrPopup.classList.add('active');
+    });
+
+    qrClose.addEventListener('click', () => {
+      qrPopup.classList.remove('active');
+    });
+
+    qrPopup.addEventListener('click', (e) => {
+      if (e.target === qrPopup) qrPopup.classList.remove('active');
+    });
+  }
+
+  // ============================================================
+  //  COPY LINK BUTTON
+  // ============================================================
+  const copyBtn = document.getElementById('copy-link-btn');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', () => {
+      const url = copyBtn.getAttribute('data-share-url');
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(url).then(() => {
+          copyBtn.textContent = '已复制 ✓';
+          copyBtn.classList.add('copied');
+          setTimeout(() => {
+            copyBtn.textContent = '复制链接';
+            copyBtn.classList.remove('copied');
+          }, 2000);
+        });
+      } else {
+        // Fallback for older browsers
+        const ta = document.createElement('textarea');
+        ta.value = url;
+        ta.style.position = 'fixed';
+        ta.style.left = '-9999px';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        copyBtn.textContent = '已复制 ✓';
+        copyBtn.classList.add('copied');
+        setTimeout(() => {
+          copyBtn.textContent = '复制链接';
+          copyBtn.classList.remove('copied');
+        }, 2000);
+      }
+    });
+  }
+
+  // ============================================================
   //  MOBILE NAV TOGGLE
   // ============================================================
   const toggle = document.getElementById('mobile-nav-toggle');

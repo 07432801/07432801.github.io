@@ -104,7 +104,7 @@
     <main id="main-content">
       <div class="content-inner">
         <div class="content-primary">
-          <article id="post-cmr030c5w00005ftk154r8euo" class="post-full" itemscope itemtype="https://schema.org/BlogPosting">
+          <article id="post-cmr048r0q0000q2tkaucgfzg4" class="post-full" itemscope itemtype="https://schema.org/BlogPosting">
   <!-- Post Header -->
   <header class="post-full-header">
     <h1 class="post-full-title" itemprop="name headline">
@@ -198,10 +198,41 @@
     <!-- Share -->
     <div class="post-share">
       <span class="share-label">分享到：</span>
-      <a href="https://twitter.com/intent/tweet?text=黄昏之时，谁そ彼&url=https://07432801.github.io/2026/06/29/hello-world/"
-         target="_blank" rel="noopener" class="share-link twitter">Twitter</a>
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https://07432801.github.io/2026/06/29/hello-world/"
-         target="_blank" rel="noopener" class="share-link facebook">Facebook</a>
+      <!-- QQ -->
+      <a href="javascript:void(0)"
+         class="share-link share-qq"
+         onclick="window.open('https://connect.qq.com/widget/shareqq/index.html?url='+encodeURIComponent('https://07432801.github.io/2026/06/29/hello-world/')+'&title='+encodeURIComponent('黄昏之时，谁そ彼')+'&source='+encodeURIComponent('黄昏记忆'),'qqshare','width=600,height=500')">
+        QQ
+      </a>
+      <!-- WeChat (QR code popup) -->
+      <button class="share-link share-wechat" id="wechat-share-btn" data-share-url="https://07432801.github.io/2026/06/29/hello-world/">
+        微信
+      </button>
+      <!-- B站 -->
+      
+      <a href="https://space.bilibili.com/" target="_blank" rel="noopener" class="share-link share-bilibili">
+        B站
+      </a>
+      
+      <!-- 小红书 -->
+      
+      <a href="https://www.xiaohongshu.com/" target="_blank" rel="noopener" class="share-link share-xiaohongshu">
+        小红书
+      </a>
+      
+      <!-- Copy Link -->
+      <button class="share-link share-copy" id="copy-link-btn" data-share-url="https://07432801.github.io/2026/06/29/hello-world/">
+        复制链接
+      </button>
+    </div>
+
+    <!-- WeChat QR Code Popup -->
+    <div id="wechat-qr-popup" class="wechat-qr-popup">
+      <div class="wechat-qr-card">
+        <p class="wechat-qr-title">微信扫一扫 分享文章</p>
+        <img id="wechat-qr-img" src="" alt="微信分享二维码" class="wechat-qr-image">
+        <button id="wechat-qr-close" class="wechat-qr-close">关闭</button>
+      </div>
     </div>
   </footer>
 </article>
@@ -310,8 +341,16 @@
           GitHub
         </a>
       
+        <a href="https://space.bilibili.com/" target="_blank" rel="noopener" class="social-link" title="B站">
+          B站
+        </a>
+      
         <a href="https://weibo.com/" target="_blank" rel="noopener" class="social-link" title="微博">
           微博
+        </a>
+      
+        <a href="https://www.xiaohongshu.com/" target="_blank" rel="noopener" class="social-link" title="小红书">
+          小红书
         </a>
       
     </div>
