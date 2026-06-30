@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 40" fill="none">
+  <defs>
+    <linearGradient id="musubiGrad" x1="0%" y1="0" x2="100%" y2="0">
+      <stop offset="0%" stop-color="#c0392b" stop-opacity="0.1"/>
+      <stop offset="20%" stop-color="#e74c3c" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#c0392b" stop-opacity="0.8"/>
+      <stop offset="80%" stop-color="#e74c3c" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#c0392b" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+  <!-- Intertwined red threads -->
+  <path d="M0,20 Q8,12 16,20 Q24,28 32,20 Q40,12 48,20 Q56,28 64,20 Q72,12 80,20 Q88,28 96,20 Q104,12 112,20 Q120,28 128,20 Q136,12 144,20 Q152,28 160,20 Q168,12 176,20 Q184,28 192,20 Q200,12 208,20 Q216,28 224,20 Q232,12 240,20 Q248,28 256,20 Q264,12 272,20 Q280,28 288,20 Q296,12 304,20 Q312,28 320,20 Q328,12 336,20 Q344,28 352,20 Q360,12 368,20 Q376,28 384,20 Q392,12 400,20"
+        stroke="url(#musubiGrad)" stroke-width="1.5" fill="none"
+        stroke-dasharray="800" stroke-dashoffset="800">
+    <animate attributeName="stroke-dashoffset" from="800" to="-800" dur="10s" repeatCount="indefinite"/>
+  </path>
+  <!-- Second thread slightly offset -->
+  <path d="M0,22 Q10,28 20,22 Q30,16 40,22 Q50,28 60,22 Q70,16 80,22 Q90,28 100,22 Q110,16 120,22 Q130,28 140,22 Q150,16 160,22 Q170,28 180,22 Q190,16 200,22 Q210,28 220,22 Q230,16 240,22 Q250,28 260,22 Q270,16 280,22 Q290,28 300,22 Q310,16 320,22 Q330,28 340,22 Q350,16 360,22 Q370,28 380,22 Q390,16 400,22"
+        stroke="url(#musubiGrad)" stroke-width="0.8" fill="none" opacity="0.5"
+        stroke-dasharray="800" stroke-dashoffset="800">
+    <animate attributeName="stroke-dashoffset" from="800" to="-800" dur="10s" repeatCount="indefinite"/>
+  </path>
+</svg>

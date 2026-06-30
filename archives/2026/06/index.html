@@ -1,187 +1,309 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
   <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>
   
+    Archives — 黄昏记忆
   
-  <title>Archives: 2026/6 | Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/2026/06/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-  
+</title>
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="黄昏记忆">
+<meta property="og:url" content="https://07432801.github.io/archives/2026/06/index.html">
+<meta property="og:site_name" content="黄昏记忆">
+<meta property="og:locale" content="zh-CN">
+
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- RSS -->
+
+
+<!-- Favicon -->
+<link id="dynamic-favicon" rel="icon" type="image/svg+xml" href="/images/comet-icon.svg">
+
+<!-- Google Fonts - Japanese friendly -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;700;900&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- Theme Stylesheet -->
 <link rel="stylesheet" href="/css/style.css">
 
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+<meta name="generator" content="Hexo">
 
-  
-  
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
-
-<meta name="generator" content="Hexo 7.3.0"></head>
-
+</head>
 <body>
+  <!-- Canvas for particle effects -->
+  <canvas id="starry-sky"></canvas>
+
   <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
+    <header id="header" class="site-header">
+  <div class="header-inner">
+    <!-- Logo / Site Title -->
+    <div class="site-brand">
+      <h1 id="logo" class="site-title">
+        <a href="/">
+          <span class="title-text">黄昏记忆</span>
+          <span class="title-comet">
+            <img src="/images/comet-icon.svg" alt="" class="comet-icon-svg" aria-hidden="true">
+          </span>
+        </a>
       </h1>
       
+      <p class="site-subtitle">你的名字 — 新海诚风格博客</p>
+      
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-        
-          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
-        
-        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
+
+    <!-- Red Thread Divider -->
+    <div class="musubi-divider">
+      <svg viewBox="0 0 200 20" class="musubi-svg">
+        <path class="musubi-path" d="M0,10 Q15,5 30,10 Q45,15 60,10 Q75,5 90,10 Q105,15 120,10 Q135,5 150,10 Q165,15 180,10 Q195,5 200,10" fill="none" stroke="url(#threadGradient)" stroke-width="1.5"/>
+        <defs>
+          <linearGradient id="threadGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#c0392b;stop-opacity:0.3"/>
+            <stop offset="50%" style="stop-color:#e74c3c;stop-opacity:0.8"/>
+            <stop offset="100%" style="stop-color:#c0392b;stop-opacity:0.3"/>
+          </linearGradient>
+        </defs>
+      </svg>
     </div>
+
+    <!-- Desktop Navigation -->
+    <nav id="main-nav" class="main-nav">
+      
+        <a class="nav-link" href="/">
+          首页
+        </a>
+      
+        <a class="nav-link" href="/archives">
+          归档
+        </a>
+      
+        <a class="nav-link" href="/about">
+          关于
+        </a>
+      
+    </nav>
+
+    <!-- Mobile Nav Toggle -->
+    <button id="mobile-nav-toggle" class="mobile-nav-toggle" aria-label="Menu">
+      <span class="toggle-bar"></span>
+      <span class="toggle-bar"></span>
+      <span class="toggle-bar"></span>
+    </button>
   </div>
 </header>
 
-      <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2026" class="archive-year">2026</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2026/06/29/hello-world/" class="archive-article-date">
-  <time class="dt-published" datetime="2026-06-29T06:55:21.089Z" itemprop="datePublished">Jun 29</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2026/06/29/hello-world/">Hello World</a>
+
+    <main id="main-content">
+      <div class="content-inner">
+        <div class="content-primary">
+          <div class="archive-page">
+  <header class="page-header">
+    <h1 class="page-title">
+      <span class="comet-icon">☄</span> 文章归档
     </h1>
-  
+  </header>
 
-    </header>
+  <!-- Red Thread Divider -->
+  <div class="musubi-divider">
+    <svg viewBox="0 0 200 20" class="musubi-svg">
+      <path d="M0,10 Q15,5 30,10 Q45,15 60,10 Q75,5 90,10 Q105,15 120,10 Q135,5 150,10 Q165,15 180,10 Q195,5 200,10" fill="none" stroke="url(#threadGradient3)" stroke-width="1.5"/>
+      <defs>
+        <linearGradient id="threadGradient3" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:#c0392b;stop-opacity:0.2"/>
+          <stop offset="50%" style="stop-color:#e74c3c;stop-opacity:0.9"/>
+          <stop offset="100%" style="stop-color:#c0392b;stop-opacity:0.2"/>
+        </linearGradient>
+      </defs>
+    </svg>
   </div>
-</article>
-  
-  
-    </div></section>
-  
 
-
-</section>
+  <div class="archive-list">
+    
+    
+      
+      
         
-          <aside id="sidebar">
-  
-    
+        <div class="archive-year">
+          <h2 class="year-heading">
+            <span class="year-comet">☄</span> 2026
+          </h2>
+        </div>
+      
 
-  
+      <article class="archive-item">
+        <time class="archive-date" datetime="2026-06-29">
+          06-29
+        </time>
+        <h3 class="archive-title">
+          <a href="/2026/06/29/hello-world/">黄昏之时，谁そ彼</a>
+        </h3>
+      </article>
     
+  </div>
+</div>
 
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/06/">June 2026</a></li></ul>
+        </div>
+        <aside id="sidebar" class="sidebar">
+  <!-- About Widget -->
+  <div class="sidebar-widget widget-about">
+    <div class="widget-inner glass-card">
+      <h3 class="widget-title">
+        <span class="widget-icon">✧</span> 关于
+      </h3>
+      <div class="widget-content">
+        <p class="about-text">
+          黄昏之时，谁そ彼。以新海诚《你的名字》为灵感的个人博客，记录生活中的每一次相遇与离别。
+        </p>
+        <p class="about-author">
+          — 泷
+        </p>
+      </div>
     </div>
   </div>
 
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2026/06/29/hello-world/">Hello World</a>
+  <!-- Recent Posts Widget -->
+  <div class="sidebar-widget widget-recent">
+    <div class="widget-inner glass-card">
+      <h3 class="widget-title">
+        <span class="widget-icon">☄</span> 最近文章
+      </h3>
+      <div class="widget-content">
+        <ul class="recent-posts-list">
+          
+          <li class="recent-post-item">
+            <span class="rp-bullet">✦</span>
+            <a href="/2026/06/29/hello-world/" class="recent-post-link">
+              黄昏之时，谁そ彼
+            </a>
+            <time class="recent-post-date">06-29</time>
           </li>
-        
-      </ul>
+          
+        </ul>
+      </div>
     </div>
   </div>
 
+  <!-- Archives Widget -->
+  <div class="sidebar-widget widget-archives">
+    <div class="widget-inner glass-card">
+      <h3 class="widget-title">
+        <span class="widget-icon">◈</span> 归档
+      </h3>
+      <div class="widget-content">
+        <ul class="archive-widget-list">
+          
+          <li class="archive-widget-item">
+            <a href="/archives/2026/06" class="archive-widget-link">
+              2026/06
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tags Widget -->
+  
+  <div class="sidebar-widget widget-tags">
+    <div class="widget-inner glass-card">
+      <h3 class="widget-title">
+        <span class="widget-icon">#</span> 标签
+      </h3>
+      <div class="widget-content">
+        <div class="tag-cloud">
+          
+          <a href="/tags/%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97/" class="tag-pill">你的名字</a>
+          
+          <a href="/tags/%E6%96%B0%E6%B5%B7%E8%AF%9A/" class="tag-pill">新海诚</a>
+          
+          <a href="/tags/%E4%BA%8C%E6%AC%A1%E5%85%83/" class="tag-pill">二次元</a>
+          
+          <a href="/tags/%E9%BB%84%E6%98%8F/" class="tag-pill">黄昏</a>
+          
+          <a href="/tags/%E5%8A%A8%E6%BC%AB/" class="tag-pill">动漫</a>
+          
+        </div>
+      </div>
+    </div>
+  </div>
   
 </aside>
-        
+
       </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
+    </main>
+
+    <footer id="footer" class="site-footer">
+  <div class="footer-inner">
+    <!-- Social Links -->
+    
+    <div class="footer-social">
       
-      &copy; 2026 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+        <a href="https://github.com/" target="_blank" rel="noopener" class="social-link" title="GitHub">
+          GitHub
+        </a>
+      
+        <a href="https://weibo.com/" target="_blank" rel="noopener" class="social-link" title="微博">
+          微博
+        </a>
+      
     </div>
+    
+
+    <!-- Copyright -->
+    <div class="footer-copyright">
+      <p>&copy; 2026 泷 —
+        <span class="musubi-heart">结</span>
+      </p>
+      <p class="footer-powered">
+        由 <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> 驱动
+        & 主题灵感来自 <span class="kimi-na">《你的名字。》</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- Decorative Comet Trail -->
+  <div class="footer-comet-trail">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" class="comet-svg">
+      <path d="M-100,30 C200,10 400,50 600,30 C800,10 1000,50 1200,30 C1300,20 1400,25 1540,30"
+            fill="none" stroke="url(#cometGradient)" stroke-width="2" opacity="0.3"/>
+      <defs>
+        <linearGradient id="cometGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:#f0a500;stop-opacity:0"/>
+          <stop offset="30%" style="stop-color:#f0a500;stop-opacity:0.6"/>
+          <stop offset="70%" style="stop-color:#e8751a;stop-opacity:0.3"/>
+          <stop offset="100%" style="stop-color:#f0a500;stop-opacity:0"/>
+        </linearGradient>
+      </defs>
+    </svg>
   </div>
 </footer>
 
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-
-<script src="/js/jquery-3.6.4.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
   </div>
+
+  <!-- Mobile Navigation -->
+  <nav id="mobile-nav" class="mobile-nav">
+    
+      <a href="/" class="mobile-nav-link">
+        首页
+      </a>
+    
+      <a href="/archives" class="mobile-nav-link">
+        归档
+      </a>
+    
+      <a href="/about" class="mobile-nav-link">
+        关于
+      </a>
+    
+  </nav>
+
+  <script src="/js/main.js"></script>
 </body>
 </html>
